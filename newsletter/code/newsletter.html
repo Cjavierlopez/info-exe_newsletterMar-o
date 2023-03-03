@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Março</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+  * {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  body {
+    margin: 10px auto;
+    max-width: 700px;
+    width: 100%;
+    min-width: 600px;
+  }
+
+  hr {
+    margin: 0;
+    border: none;
+    border-bottom: 0.5px solid #000000;
+    width: 700px;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  button.menu {
+    width: 100px;
+    height: 40px;
+  }
+
+
+  button:hover {
+  box-shadow: 0 0 10px #5BCFFF;
+  transform: scale(1.05);
+}
+
+  button:hover {
+    background-image: linear-gradient(to top, #5BCFFF, #fff);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 45px 90px 620px 90px 305px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    max-height: 300px;
+  }
+
+  .div1 { 
+    grid-area: 1 / 1 / 2 / 4;
+    height: 83px;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .div1 picture img{
+    width: 200px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  
+  .line1{
+    grid-area: 1 / 1 / 2 / 4;
+    position: absolute;
+    margin-top: 80px;
+  }
+  
+  .div2 { 
+    grid-area: 2 / 1 / 3 / 4;
+  }
+  
+  
+  .deco1 {
+    grid-area: 2 / 1 / 3 / 4;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #5BCFFF 100%);
+  }
+  
+  ul.menu {
+    display: flex;
+    list-style: none;
+    font-weight: bold;
+    font-size: 14px;
+    justify-content: space-between;
+    margin: 1px 20px;
+    padding: 0;
+    padding-left: 0;
+  }
+
+  .line2{
+    grid-area: 2 / 1 / 3 / 4;
+    position: absolute;
+    margin-top: 125px;
+  }
+
+  .div3 {
+    grid-area: 3 / 1 / 4 / 4;
+    justify-content: center;
+    height: 75px;
+    display: inherit;
+  }
+
+  h3.first {
+    grid-area: 3 / 1 / 4 / 4;
+    margin: 0;
+    font-size: 50px;
+  }
+
+  .line3{
+    grid-area: 2 / 1 / 3 / 4;
+    position: absolute;
+    margin-top: 215px;
+  }
+
+  .div4 {
+    grid-area: 4 / 1 / 5 / 2;
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  button.product{
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  article.item {
+    max-width: 100%;
+  }
+  
+  article.item h3 {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  article.item h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .item img {
+    max-width: 100%; 
+  }
+
+  hr.overtext {
+    width: auto;
+    border: 0,5px solid #000;
+  }
+
+  .line4{
+    grid-area: 4 / 1 / 5 / 2;
+    position: absolute;
+    margin-top: 21px;
+  }
+
+  .deco2 {
+    position: absolute;
+    margin-top: -130px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #5BCFFF 100%);
+    min-width: 700px;
+    height: 151px;
+    z-index: -1;
+  }
+
+  .line5 {
+    grid-area: 4 / 1 / 5 / 2;
+    position: absolute;
+    margin-top: 620px;
+  }
+
+  .deco3 {
+    position: absolute;
+    margin-top: 430px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #5BCFFF 100%);
+    min-width: 700px;
+    height: 190px;
+    z-index: -1;
+  }
+
+  .div5 { 
+    grid-area: 5 / 1 / 6 / 2;
+    justify-content: center;
+    height: 75px;
+    display: inherit;
+  }
+
+  h3.second {
+    grid-area: 5 / 1 / 6 / 2;
+    display: inherit;
+    margin: 0;
+    justify-content: center;
+    font-size: 50px;
+    min-width: 700px;
+  }
+
+  .line6 {
+    grid-area: 5 / 1 / 6 / 2;
+    position: inherit;
+  }
+
+  .div6 { 
+    grid-area: 6 / 1 / 7 / 2; 
+  }
+  
+  a.works {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    max-width: 700px;
+  }
+
+  button.workstation {
+    padding: 0;
+    min-width: 700px;
+  }
+  img.destac {
+    transition:transform 0.3s ease-in-out;
+  }
+
+  img.destac:hover {
+    transform: scale(1.30);
+  }
+
+  article.descrip {
+    display: inherit;
+  }
+
+  article.descrip ul {
+    list-style: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  article.imgw img{
+    width: 300px;
+  }
+
+  .deco4 {
+    position: absolute;
+    margin-top: 1040px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #5BCFFF 100%);
+    min-width: 700px;
+    height: 190px;
+    z-index: -2;
+  }
+
+  .h41, .h42 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .h51 {
+    margin: 0;
+    padding-right: 100px;
+    font-size: 18px;
+    color: red;
+    text-decoration: line-through;
+    display: inherit;
+    justify-content: start;
+  }
+
+  .line7 {
+    grid-area: 6 / 1 / 7 / 2;
+    z-index: -1;
+  }
+
+</style>
+<body>
+  <main class="grid">
+    <section class="div1">
+      <picture >
+        <a href="https://www.info-exe.com" target="_blank">
+          <img class="logo-container" a="https://info-exe.com/" src="/newsletter/img/tools/Logo.png" alt="Logo info-eXe.com">
+        </a>
+      </picture>
+    </section>
+    <hr class="line1">
+    <div class="deco1"></div>
+    <section class="div2">
+      <nav>
+        <ul class="menu">
+          <li><a target="_blank" href="https://info-exe.com/index.php?route=product/category&path=59"><button class="menu">Computadores</button></a></li>
+          <li><a target="_blank" href="https://info-exe.com/index.php?route=product/category&path=65"><button class="menu">Portáteis</button></a></li>
+          <li><a target="_blank" href="https://info-exe.com/index.php?route=product/category&path=69"><button class="menu">Monitores</button></a></li>
+          <li><a target="_blank" href="https://info-exe.com/index.php?route=product/category&path=66"><button class="menu">Workstations</button></a></li>
+        </ul>
+      </nav>
+    </section>
+    <hr class="line2">
+    <section class="div3">
+      <h3 class="first">OFERTA EXCLUSIVA LENOVO</h3>
+    </section>
+    <hr class="line3">
+    <section class="div4">
+      <div class="deco2"></div>
+
+      <button class="product">
+        <article class="item">
+          <picture>
+            <a href="https://info-exe.com/index.php?route=product/product&product_id=150" target="_blank">
+              <img src="/newsletter/img/portáteis/lenovo_thinkpad_x1_yoga_g1/lenovo_thinkpad_x1_yoga_g1_000.png" alt="">
+            </a>
+          </picture>
+          <hr class="overtext">
+          <h3>LENOVO THINKPAD X1 YOGA</h3>
+          <h2>399€ IVA incl.</h2>
+        </article>
+      </button>
+
+      <div class="empty"></div>
+
+      <button class="product">
+        <article class="item">
+          <picture>
+            <a href="https://info-exe.com/index.php?route=product/product&product_id=154" target="_blank">
+              <img src="/newsletter/img/portáteis/lenovo_thinkpad_t480s/lenovo_thinpad_t480s_002.png" alt="">
+            </a>
+          </picture>
+          <hr class="overtext">
+          <h3>LENOVO THINKPAD T480S</h3>
+          <h2>429€ IVA incl.</h2>
+        </article>
+      </button>
+
+      <hr class="line4">
+
+      <button class="product">
+        <article class="item">
+          <picture>
+            <a href="https://info-exe.com/index.php?route=product/product&product_id=152" target="_blank">
+              <img src="/newsletter/img/portáteis/lenovo_ideapad_1_15ada7/lenovo_ideapad_1_amd3020e_000.png" alt="">
+            </a>
+          </picture>
+          <hr class="overtext">
+          <h3>LENOVO IDEAPAD 1</h3>
+          <h2>369€ IVA incl.</h2>
+        </article>
+      </button>
+
+      <div class="empty"></div>
+
+      <button class="product">
+        <article class="item">
+          <picture>
+            <a href="https://info-exe.com/index.php?route=product/product&product_id=151" target="_blank">
+              <img src="/newsletter/img/portáteis/hp_elitebook_x360/hp_elitebook_x360_002.png" alt="">
+            </a>
+          </picture>
+          <hr class="overtext">
+          <h3>HP ELITEBOOK 1030</h3>
+          <h2>329 € IVA incl.</h2>
+        </article>
+      </button>
+
+      <div class="deco3"></div>
+      <hr class="line5">
+      
+    </section>
+    <section class="div5">
+      <h3 class="second">PROMOÇÃO WORKSTATION</h3>
+    </section>
+    <hr class="line6">
+    <section class="div6">
+      <button class="workstation">
+        <a class="works" href="" target="_blank">
+          <article class="descrip">
+            <ul>
+              <li><h1>DESCRIPÇÃO</h1></li>
+              <li>Intel Core i9-12900F 5.1 Ghz</li>
+              <li>SI GeForce RTX 3080 12GB</li>
+              <li>Asus PRIME Z690-A</li>
+              <li>Corsair iCUE H150i ELITE</li>
+              <li>Corsair DDR5 5600MHz 32GB</li>            
+              <li>Crucial P5 Plus M2 1TB</li>
+              <li>Corsair RMx 1000w 80PGM</li>
+              <li>Corsair iCUE 4000X Branca</li>
+            </ul>
+            </article>
+          <article class="imgw">
+            <picture>
+              <img class="destac" src="/newsletter/img/workstations/i9_3080/i9_3080_000.png" alt="Workstation Gaming Last Generation">
+            </picture>
+          </article>
+          <article class="price">
+              <h4 class="h41">POUPANZA 12%</h4>
+              <h4 class="h42">2999€ IVA incl.</h4>
+              <h5 class="h51">3399€</h5>
+          </article>
+        </a>
+      </button>
+    </section>
+    <div class="deco4"></div>
+    <hr class="line7">
+  </main>
+  
+</body>
+</html>
